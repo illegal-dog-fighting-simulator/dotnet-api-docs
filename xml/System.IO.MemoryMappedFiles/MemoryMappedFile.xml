@@ -49,6 +49,8 @@
  A memory-mapped file can be associated with an optional name that allows the memory-mapped file to be shared with other processes. 
   
  You can create multiple views of the memory-mapped file, including views of parts of the file. You can map the same part of a file to more than one address to create concurrent memory. For two views to remain concurrent, they have to be created from the same memory-mapped file. Creating two file mappings of the same file with two views does not provide concurrency.  
+
+ When Dispose is called, garbage collection must be ran before a new memory-mapped file with the same name is created.
   
    
   
